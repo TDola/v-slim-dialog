@@ -5,9 +5,9 @@
 ## Installation
 
 ```bash
-yarn add v-slim-dialog
+yarn add https://github.com/TDola/v-slim-dialog
 # Or using npm
-npm install v-slim-dialog --save
+npm install https://github.com/TDola/v-slim-dialog --save
 ```
 
 # Usage
