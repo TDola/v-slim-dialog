@@ -19,7 +19,7 @@ export default {
     }
   },
   methods: {
-    open (message, { title, cancelLabel, prompt, size, okLabel = 'OK' }) {
+    open (message, { title, cancelLabel, prompt, size, okLabel = 'OK' , type}) {
       if (!this.$parent) {
         this.$mount()
         document.body.appendChild(this.$el)
