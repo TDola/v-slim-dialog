@@ -4,6 +4,7 @@
 
 
 
+
 </template>
 
 <script>
@@ -19,7 +20,7 @@ export default {
     }
   },
   methods: {
-    open (message, { title, cancelLabel, prompt, size, okLabel = 'OK' , type}) {
+    open (message, { title, cancelLabel, prompt, size, okLabel = 'OK', type }) {
       if (!this.$parent) {
         this.$mount()
         document.body.appendChild(this.$el)
@@ -79,7 +80,7 @@ export default {
         }
       } else if ('Enter' === e.key) {
         // If you pressed enter (Windows)
-        if (!this.items[this.items.length - 1].prompt) {
+        if (this.items && this.items.length > 0 && this.items[this.items.length - 1] && !this.items[this.items.length - 1].prompt) {
           // If it's not a prompt, then hitting enter is allowed for closing
           this.onClose(this.items[this.items.length - 1])
         }
