@@ -74,6 +74,7 @@ export default {
     },
 
     keyUp (e) {
+      e.preventDefault()
       if ('Escape' === e.key) {
         if (this.items.length > 0) {
           this.onClose(this.items[this.items.length - 1])
